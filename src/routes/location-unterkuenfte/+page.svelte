@@ -32,25 +32,28 @@
     </p>
     <div class="hotel-cards">
       <LocationCard
-        name="Hotel Beispielblick"
-        description="Nahe bei der Location."
-        website="https://example.com"
-        mapsUrl="https://www.google.com/maps/search/?api=1&query=Hotel%20Beispielblick%2C%20Straden"
-        address={["Hotelstraße 1", "8345 Straden"]}
+        name="JUFA Hotel Tieschen"
+        description="Mit Frühstück. Auch Zimmer für Gruppen verfügbar."
+        website="https://www.jufahotels.com/hotel/tieschen/"
+        mapsUrl="https://www.google.com/maps/search/?api=1&query=JUFA%20Hotel%20Tieschen"
+        address={["Patzen 40", "8355 Tieschen"]}
+        imageSrc="https://www.jufahotels.com/wp-content/uploads/2024/05/gastgarten-jufa-hotel-tieschen-1-scaled.jpg.webp"
       />
       <LocationCard
-        name="Gästehaus Sonnengarten"
-        description="Kleines Gästehaus im Grünen."
-        website="https://example.com"
-        mapsUrl="https://www.google.com/maps/search/?api=1&query=G%C3%A4stehaus%20Sonnengarten%2C%20Straden"
-        address={["Sonnenweg 4", "8345 Straden"]}
+        name="Gasthof Wagner"
+        description="Mit Frühstück."
+        website="https://www.gasthof-wagner.com"
+        mapsUrl="https://www.google.com/maps/search/?api=1&query=Gasthof%20Wagner%2C%20Halbenrain"
+        address={["Halbenrain 93", "8492 Halbenrain"]}
+        imageSrc="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlLZxfBgFxWxKdOPKVz1P2CS1YtcIrsKs_HOW8hn4B9LLloMYX7FtL9Fr3tbKCVbG_FMNOrKLgiCoTK1Gql10qLTiIJW55dOuh2w5tvlcNwENTucYltl1Q0nYJbh8-72lDcF1Dk=s680-w680-h510-rw"
       />
       <LocationCard
-        name="Pension Weinland"
-        description="Praktisch in der Umgebung."
-        website="https://example.com"
-        mapsUrl="https://www.google.com/maps/search/?api=1&query=Pension%20Weinland%2C%20Straden"
-        address={["Weinbergweg 7", "8345 Straden"]}
+        name="FeWo Flucher-Plaschg"
+        description="Ferienwohnungen, auch für Gruppen."
+        website="https://flucher-plaschg.at"
+        mapsUrl="https://www.google.com/maps/search/?api=1&query=Ferienwohnungen%20Flucher-Plaschg%2C%20Straden"
+        address={["Hof 71", "8345 Straden"]}
+        imageSrc="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk6FS2CTI-7ccEWgRTgv_nOyPVI4YM03CYAL6tyYu6buFbW1q_bku6PuHp_Gri8uXBydkMDJERN5iKX2e52MklUQoO91IqLswomXUH9jC66LESUGD2N-0-1aDFtsLwmZpII3drC=s680-w680-h510-rw"
       />
     </div>
   </section>
