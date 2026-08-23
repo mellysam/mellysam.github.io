@@ -7,7 +7,7 @@
   import FormattedDate from "$lib/components/FormattedDate.svelte";
   import PageHeading from "$lib/components/PageHeading.svelte";
   import PixelUs from "$lib/components/PixelUs.svelte";
-  import { MEETING_TIME, PARTY_TIME, WEDDING_DAY } from "$lib/dates";
+  import { WEDDING_DAY, WEDDING_DAY_START } from "$lib/dates";
 </script>
 
 <main>
@@ -16,10 +16,10 @@
     <p class="date"><FormattedDate date={WEDDING_DAY} /></p>
   </DateHighlight>
   <section aria-label="Countdown" aria-live="polite">
-    <Countdown date={MEETING_TIME} />
+    <Countdown date={WEDDING_DAY_START} />
   </section>
   <div class="buttons">
-    <AddToCalendarButton start={MEETING_TIME} end={PARTY_TIME} title="Hochzeit Melanie & Samuel" />
+    <AddToCalendarButton />
     <Button href="/location-unterkuenfte">📍 Location & Unterkünfte</Button>
   </div>
   <p class="formal-invite-note">Alle Informationen folgen mit der Einladung!</p>
