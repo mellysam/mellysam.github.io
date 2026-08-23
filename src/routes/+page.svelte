@@ -1,5 +1,6 @@
 <script lang="ts">
   import Countdown from "$lib/components/Countdown.svelte";
+  import FlowerStrip from "$lib/components/FlowerStrip.svelte";
   import FormattedDate from "$lib/components/FormattedDate.svelte";
   import FormattedTime from "$lib/components/FormattedTime.svelte";
   import { FOOD_TIME, MEETING_TIME, PARTY_TIME, TRAUUUNG_TIME, WEDDING_DAY } from "$lib/dates";
@@ -39,3 +40,24 @@
     <Countdown date={MEETING_TIME} />
   </section>
 </main>
+
+<FlowerStrip />
+
+<style>
+  :global(body) {
+    margin: 0;
+  }
+
+  main {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 2rem 1rem 10rem;
+    text-align: center;
+  }
+
+  ol {
+    display: inline-block;
+    padding-left: 1.5rem;
+    text-align: left;
+  }
+</style>
