@@ -49,12 +49,14 @@
     border: 0;
     background: transparent;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .people {
     display: block;
     width: 100%;
     image-rendering: pixelated;
+    user-select: none;
   }
 
   .heart-pop {
