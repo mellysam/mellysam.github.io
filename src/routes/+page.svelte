@@ -3,6 +3,7 @@
   import FlowerStrip from "$lib/components/FlowerStrip.svelte";
   import FormattedDate from "$lib/components/FormattedDate.svelte";
   import FormattedTime from "$lib/components/FormattedTime.svelte";
+  import PixelUs from "$lib/components/PixelUs.svelte";
   import { FOOD_TIME, MEETING_TIME, PARTY_TIME, TRAUUUNG_TIME, WEDDING_DAY } from "$lib/dates";
 </script>
 
@@ -41,7 +42,12 @@
   </section>
 </main>
 
-<FlowerStrip />
+<div class="pixel-us">
+  <PixelUs />
+</div>
+<div class="flowers">
+  <FlowerStrip />
+</div>
 
 <style>
   :global(body) {
@@ -51,7 +57,7 @@
   main {
     min-height: 100vh;
     box-sizing: border-box;
-    padding: 2rem 1rem 10rem;
+    padding: 2rem 1rem 18rem;
     text-align: center;
   }
 
@@ -59,5 +65,22 @@
     display: inline-block;
     padding-left: 1.5rem;
     text-align: left;
+  }
+
+  .pixel-us {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    width: min(18rem, 70vw);
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .flowers {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
   }
 </style>

@@ -12,6 +12,7 @@ Use clear, simple language in code, development text, README files, and comments
 Keep components small. Each component should have one clear responsibility and an explicit, easy-to-read interface.
 When a component starts handling multiple concerns, split it before adding more behavior.
 Put standalone visual pieces, decorative elements, and repeated UI patterns in their own components instead of leaving them inline on a page.
+Let parent components own layout and positioning. Child components should avoid deciding where they sit on the page unless positioning is their core responsibility.
 
 # Project
 
