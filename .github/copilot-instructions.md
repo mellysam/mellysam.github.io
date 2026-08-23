@@ -7,6 +7,11 @@ Keep diffs simple and easy for people to understand.
 
 Use clear, simple language in code, development text, README files, and comments.
 
+# Components
+
+Keep components small. Each component should have one clear responsibility and an explicit, easy-to-read interface.
+When a component starts handling multiple concerns, split it before adding more behavior.
+
 # Project
 
 This is a SvelteKit SPA deployed to GitHub Pages with `@sveltejs/adapter-static`.
