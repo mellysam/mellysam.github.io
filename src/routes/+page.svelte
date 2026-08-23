@@ -43,7 +43,9 @@
   }
 
   h1 {
-    font-size: clamp(1.8rem, 6vw, 3.4rem);
+    font-family: var(--font-script);
+    font-size: clamp(2rem, 7vw, 4rem);
+    font-weight: 400;
   }
 
   .date {

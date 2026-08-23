@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&display=swap"
     rel="stylesheet"
   />
 </svelte:head>
@@ -24,6 +24,7 @@
     --color-flower-pink: #d94f9f;
     --color-flower-purple: #7c5bd6;
     --color-flower-blue: #2f6fe4;
+    --font-script: "Great Vibes", cursive;
   }
 
   :global(body) {
