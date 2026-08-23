@@ -48,7 +48,7 @@
 
   strong {
     display: block;
-    font-size: clamp(1.6rem, 6vw, 3.4rem);
+    font-size: clamp(1.6rem, 4vw, 2.75rem);
     font-variant-numeric: tabular-nums;
     line-height: 1;
   }

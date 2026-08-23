@@ -31,14 +31,17 @@
     margin: 0;
   }
 
-  main {
+  :global(:root) {
     --bottom-art-space: 11rem;
-    --people-size: min(11rem, 50vw);
+    --people-size: 11rem;
     --flower-strip-height: 4.5rem;
+  }
+
+  main {
     display: grid;
     align-content: start;
     justify-items: center;
-    gap: clamp(1rem, 3vw, 2rem);
+    gap: 1.25rem;
     min-height: 100vh;
     box-sizing: border-box;
     padding: 2rem 1rem var(--bottom-art-space);
@@ -47,13 +50,13 @@
 
   h1 {
     font-family: var(--font-script);
-    font-size: clamp(2rem, 7vw, 4rem);
+    font-size: clamp(2rem, 5vw, 3.25rem);
     font-weight: 400;
   }
 
   .date {
     margin: 0;
-    font-size: clamp(2.4rem, 10vw, 5.8rem);
+    font-size: clamp(2.4rem, 7vw, 4.5rem);
     font-weight: 700;
   }
 
@@ -71,7 +74,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    --flower-strip-height: 4.5rem;
     z-index: 1;
   }
 </style>

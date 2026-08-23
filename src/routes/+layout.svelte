@@ -6,6 +6,7 @@
 
 <svelte:head>
   <link rel="icon" href={favicon} />
+  <meta name="theme-color" content="#fffaf2" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
