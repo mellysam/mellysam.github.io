@@ -61,6 +61,7 @@
 <style>
   main {
     display: grid;
+    align-content: start;
     justify-items: center;
     gap: 1.25rem;
     min-height: 100vh;
