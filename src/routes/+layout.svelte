@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap"
     rel="stylesheet"
   />
 </svelte:head>
@@ -17,7 +17,18 @@
 {@render children()}
 
 <style>
+  :global(:root) {
+    --color-background: #fffaf2;
+    --color-foreground: #231f1b;
+    --color-flower-green: #1f6f36;
+    --color-flower-pink: #d94f9f;
+    --color-flower-purple: #7c5bd6;
+    --color-flower-blue: #2f6fe4;
+  }
+
   :global(body) {
-    font-family: "Lato", Helvetica, sans-serif;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Playfair Display", Georgia, serif;
   }
 </style>

@@ -1,45 +1,22 @@
 <script lang="ts">
+  import AddToCalendarButton from "$lib/components/AddToCalendarButton.svelte";
   import Countdown from "$lib/components/Countdown.svelte";
+  import DateHighlight from "$lib/components/DateHighlight.svelte";
   import FlowerStrip from "$lib/components/FlowerStrip.svelte";
   import FormattedDate from "$lib/components/FormattedDate.svelte";
-  import FormattedTime from "$lib/components/FormattedTime.svelte";
   import PixelUs from "$lib/components/PixelUs.svelte";
-  import { FOOD_TIME, MEETING_TIME, PARTY_TIME, TRAUUUNG_TIME, WEDDING_DAY } from "$lib/dates";
+  import { MEETING_TIME, PARTY_TIME, WEDDING_DAY } from "$lib/dates";
 </script>
 
 <main>
-  <section aria-labelledby="page-title">
-    <p>Save the Date</p>
-    <h1 id="page-title"><FormattedDate date={WEDDING_DAY} /></h1>
-    <p>Treffpunkt um <FormattedTime date={MEETING_TIME} /></p>
-  </section>
-
-  <section aria-labelledby="timeline-title">
-    <h2 id="timeline-title">Grobe Planung</h2>
-    <ol>
-      <li>
-        <FormattedTime date={MEETING_TIME} />
-        <span>Treffpunkt</span>
-      </li>
-      <li>
-        <FormattedTime date={TRAUUUNG_TIME} />
-        <span>Trauung</span>
-      </li>
-      <li>
-        <FormattedTime date={FOOD_TIME} />
-        <span>Essen</span>
-      </li>
-      <li>
-        <FormattedTime date={PARTY_TIME} />
-        <span>Party</span>
-      </li>
-    </ol>
-  </section>
-
-  <section aria-labelledby="countdown-title" aria-live="polite">
-    <p id="countdown-title">Countdown to meeting time</p>
+  <h1 id="page-title">Save the Date</h1>
+  <DateHighlight>
+    <p class="date"><FormattedDate date={WEDDING_DAY} /></p>
+  </DateHighlight>
+  <section aria-label="Countdown" aria-live="polite">
     <Countdown date={MEETING_TIME} />
   </section>
+  <AddToCalendarButton start={MEETING_TIME} end={PARTY_TIME} title="Hochzeit Melanie & Samuel" />
 </main>
 
 <div class="pixel-us">
@@ -55,16 +32,24 @@
   }
 
   main {
+    display: grid;
+    align-content: start;
+    justify-items: center;
+    gap: clamp(1.25rem, 4vw, 2.5rem);
     min-height: 100vh;
     box-sizing: border-box;
     padding: 2rem 1rem 18rem;
     text-align: center;
   }
 
-  ol {
-    display: inline-block;
-    padding-left: 1.5rem;
-    text-align: left;
+  h1 {
+    font-size: clamp(2rem, 7vw, 4rem);
+  }
+
+  .date {
+    margin: 0;
+    font-size: clamp(3rem, 12vw, 7rem);
+    font-weight: 700;
   }
 
   .pixel-us {

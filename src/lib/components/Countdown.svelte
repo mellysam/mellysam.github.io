@@ -24,8 +24,32 @@
 </script>
 
 <p>
-  <strong>{countdown.days}</strong> Tage
-  <strong>{countdown.hours}</strong> Stunden
-  <strong>{countdown.minutes}</strong> Minuten
-  <strong>{countdown.seconds}</strong> Sekunden
+  <span class="part"><strong>{countdown.days}</strong><span>Tage</span></span>
+  <span class="part"><strong>{countdown.hours}</strong><span>Stunden</span></span>
+  <span class="part"><strong>{countdown.minutes}</strong><span>Minuten</span></span>
+  <span class="part"><strong>{countdown.seconds}</strong><span>Sekunden</span></span>
 </p>
+
+<style>
+  p {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .part {
+    display: inline-grid;
+    gap: 0.15rem;
+    min-width: 6.5rem;
+    text-align: center;
+  }
+
+  strong {
+    display: block;
+    font-size: clamp(2rem, 7vw, 4rem);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+</style>
