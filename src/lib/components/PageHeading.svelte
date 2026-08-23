@@ -21,7 +21,7 @@
 <style>
   h1 {
     font-family: var(--font-script);
-    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-size: clamp(3.6rem, 11vw, 7rem);
     font-weight: 400;
     margin: 2rem 0 1rem;
   }
