@@ -1,0 +1,94 @@
+<script lang="ts">
+  import Button from "$lib/components/Button.svelte";
+
+  let {
+    address,
+    description,
+    imageAlt,
+    imageSrc,
+    mapsUrl,
+    name,
+    website,
+  }: {
+    address: string[];
+    description: string;
+    imageAlt?: string;
+    imageSrc?: string;
+    mapsUrl: string;
+    name: string;
+    website: string;
+  } = $props();
+</script>
+
+<article class="card">
+  {#if imageSrc}
+    <img src={imageSrc} alt={imageAlt ?? ""} />
+  {:else}
+    <div class="image-placeholder" aria-hidden="true">Bild folgt</div>
+  {/if}
+  <h3>{name}</h3>
+  <p>{description}</p>
+  <address>
+    {#each address as line}
+      <span>{line}</span>
+    {/each}
+  </address>
+  <div class="actions">
+    <Button href={website} target="_blank" rel="noreferrer">🌐 Website</Button>
+    <Button href={mapsUrl} target="_blank" rel="noreferrer">🗺️ Karte</Button>
+  </div>
+</article>
+
+<style>
+  .card {
+    display: grid;
+    gap: 0.85rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.25rem;
+    border: 1px solid color-mix(in srgb, var(--color-foreground) 25%, transparent);
+    border-radius: 0.75rem;
+    background: color-mix(in srgb, var(--color-background) 85%, white);
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 1.35rem;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+
+  .image-placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px dashed color-mix(in srgb, var(--color-foreground) 30%, transparent);
+    border-radius: 0.5rem;
+    color: color-mix(in srgb, var(--color-foreground) 65%, transparent);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  address {
+    display: grid;
+    gap: 0.15rem;
+    font-style: normal;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+  }
+</style>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import AddToCalendarButton from "$lib/components/AddToCalendarButton.svelte";
+  import Button from "$lib/components/Button.svelte";
   import Countdown from "$lib/components/Countdown.svelte";
   import DateHighlight from "$lib/components/DateHighlight.svelte";
   import FlowerStrip from "$lib/components/FlowerStrip.svelte";
@@ -9,14 +10,17 @@
 </script>
 
 <main>
-  <h1 id="page-title">Save the Date</h1>
+  <h1 id="page-title"><a href="/">Save the Date</a></h1>
   <DateHighlight>
     <p class="date"><FormattedDate date={WEDDING_DAY} /></p>
   </DateHighlight>
   <section aria-label="Countdown" aria-live="polite">
     <Countdown date={MEETING_TIME} />
   </section>
-  <AddToCalendarButton start={MEETING_TIME} end={PARTY_TIME} title="Hochzeit Melanie & Samuel" />
+  <div class="buttons">
+    <AddToCalendarButton start={MEETING_TIME} end={PARTY_TIME} title="Hochzeit Melanie & Samuel" />
+    <Button href="/location-unterkuenfte">📍 Location & Unterkünfte</Button>
+  </div>
 </main>
 
 <div class="pixel-us">
@@ -54,10 +58,22 @@
     font-weight: 400;
   }
 
+  h1 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   .date {
     margin: 0;
     font-size: clamp(2.4rem, 7vw, 4.5rem);
     font-weight: 700;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
   }
 
   .pixel-us {

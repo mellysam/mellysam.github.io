@@ -25,6 +25,8 @@
     --color-flower-pink: #d94f9f;
     --color-flower-purple: #7c5bd6;
     --color-flower-blue: #2f6fe4;
+    --color-link: #255fbd;
+    --color-link-visited: #255fbd;
     --font-script: "Great Vibes", cursive;
   }
 
@@ -32,5 +34,13 @@
     background: var(--color-background);
     color: var(--color-foreground);
     font-family: "Playfair Display", Georgia, serif;
+  }
+
+  :global(a) {
+    color: var(--color-link);
+  }
+
+  :global(a:visited) {
+    color: var(--color-link-visited);
   }
 </style>
