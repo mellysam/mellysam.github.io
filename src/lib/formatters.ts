@@ -1,7 +1,9 @@
 export const VIENNA_TIME_ZONE = "Europe/Vienna";
 
 const dateFormatter = new Intl.DateTimeFormat("de-AT", {
-  dateStyle: "full",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
   timeZone: VIENNA_TIME_ZONE,
 });
 

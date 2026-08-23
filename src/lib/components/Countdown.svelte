@@ -36,13 +36,13 @@
     flex-wrap: wrap;
     align-items: start;
     justify-content: center;
-    gap: 0.1rem;
+    gap: 0;
   }
 
   .part {
     display: inline-grid;
     gap: 0.1rem;
-    min-width: 5.5rem;
+    min-width: 4.6rem;
     text-align: center;
   }
 
@@ -51,5 +51,9 @@
     font-size: clamp(1.6rem, 4vw, 2.75rem);
     font-variant-numeric: tabular-nums;
     line-height: 1;
+  }
+
+  .part span {
+    font-size: 0.85rem;
   }
 </style>

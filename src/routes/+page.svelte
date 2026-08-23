@@ -45,7 +45,7 @@
     display: grid;
     align-content: start;
     justify-items: center;
-    gap: 1.25rem;
+    gap: 1rem;
     min-height: 100vh;
     box-sizing: border-box;
     padding: 2rem 1rem var(--bottom-art-space);
@@ -54,7 +54,7 @@
 
   h1 {
     font-family: var(--font-script);
-    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-size: clamp(2.4rem, 6vw, 4rem);
     font-weight: 400;
   }
 
