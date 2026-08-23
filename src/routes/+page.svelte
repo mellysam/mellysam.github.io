@@ -35,7 +35,7 @@
     display: grid;
     align-content: start;
     justify-items: center;
-    gap: clamp(1.25rem, 4vw, 2.5rem);
+    gap: clamp(1rem, 3vw, 2rem);
     min-height: 100vh;
     box-sizing: border-box;
     padding: 2rem 1rem 18rem;
@@ -43,12 +43,12 @@
   }
 
   h1 {
-    font-size: clamp(2rem, 7vw, 4rem);
+    font-size: clamp(1.8rem, 6vw, 3.4rem);
   }
 
   .date {
     margin: 0;
-    font-size: clamp(3rem, 12vw, 7rem);
+    font-size: clamp(2.4rem, 10vw, 5.8rem);
     font-weight: 700;
   }
 

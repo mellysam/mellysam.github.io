@@ -36,19 +36,19 @@
     flex-wrap: wrap;
     align-items: start;
     justify-content: center;
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
   .part {
     display: inline-grid;
-    gap: 0.15rem;
-    min-width: 6.5rem;
+    gap: 0.1rem;
+    min-width: 5.5rem;
     text-align: center;
   }
 
   strong {
     display: block;
-    font-size: clamp(2rem, 7vw, 4rem);
+    font-size: clamp(1.6rem, 6vw, 3.4rem);
     font-variant-numeric: tabular-nums;
     line-height: 1;
   }
