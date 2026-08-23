@@ -31,23 +31,24 @@
       "END:VCALENDAR",
     ].join("\r\n");
 
-    return new File([calendar], calendarFileName, { type: "text/calendar" });
+    return new File([calendar], calendarFileName, { type: "text/calendar;charset=utf-8" });
   };
 
-  const addToCalendar = async () => {
+  const addToCalendar = () => {
     const file = createCalendarFile();
-
-    if (navigator.canShare?.({ files: [file] })) {
-      await navigator.share({ files: [file], title: calendarTitle });
-      return;
-    }
-
     const url = URL.createObjectURL(file);
     const link = document.createElement("a");
+
     link.href = url;
     link.download = file.name;
+    link.style.display = "none";
+    document.body.append(link);
     link.click();
-    URL.revokeObjectURL(url);
+
+    window.setTimeout(() => {
+      link.remove();
+      URL.revokeObjectURL(url);
+    }, 1000);
   };
 </script>
 
