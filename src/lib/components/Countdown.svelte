@@ -24,8 +24,8 @@
 </script>
 
 <p>
-  <strong>{countdown.days}</strong> days
-  <strong>{countdown.hours}</strong> hours
-  <strong>{countdown.minutes}</strong> minutes
-  <strong>{countdown.seconds}</strong> seconds
+  <strong>{countdown.days}</strong> Tage
+  <strong>{countdown.hours}</strong> Stunden
+  <strong>{countdown.minutes}</strong> Minuten
+  <strong>{countdown.seconds}</strong> Sekunden
 </p>

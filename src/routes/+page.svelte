@@ -9,25 +9,25 @@
 
 <main>
   <section aria-labelledby="page-title">
-    <p>Save the date</p>
+    <p>Save the Date</p>
     <h1 id="page-title"><FormattedDate date={WEDDING_DAY} /></h1>
-    <p>Meet at <FormattedTime date={MEETING_TIME} /></p>
+    <p>Treffpunkt um <FormattedTime date={MEETING_TIME} /></p>
   </section>
 
   <section aria-labelledby="timeline-title">
-    <h2 id="timeline-title">Rough timeline</h2>
+    <h2 id="timeline-title">Grobe Planung</h2>
     <ol>
       <li>
         <FormattedTime date={MEETING_TIME} />
-        <span>Meet up</span>
+        <span>Treffpunkt</span>
       </li>
       <li>
         <FormattedTime date={TRAUUUNG_TIME} />
-        <span>Ceremony</span>
+        <span>Trauung</span>
       </li>
       <li>
         <FormattedTime date={FOOD_TIME} />
-        <span>Dinner</span>
+        <span>Essen</span>
       </li>
       <li>
         <FormattedTime date={PARTY_TIME} />
