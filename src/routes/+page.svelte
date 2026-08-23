@@ -5,12 +5,13 @@
   import DateHighlight from "$lib/components/DateHighlight.svelte";
   import FlowerStrip from "$lib/components/FlowerStrip.svelte";
   import FormattedDate from "$lib/components/FormattedDate.svelte";
+  import PageHeading from "$lib/components/PageHeading.svelte";
   import PixelUs from "$lib/components/PixelUs.svelte";
   import { MEETING_TIME, PARTY_TIME, WEDDING_DAY } from "$lib/dates";
 </script>
 
 <main>
-  <h1 id="page-title"><a href="/">Save the Date</a></h1>
+  <PageHeading id="page-title" href="/">Save the Date</PageHeading>
   <DateHighlight>
     <p class="date"><FormattedDate date={WEDDING_DAY} /></p>
   </DateHighlight>
@@ -21,6 +22,7 @@
     <AddToCalendarButton start={MEETING_TIME} end={PARTY_TIME} title="Hochzeit Melanie & Samuel" />
     <Button href="/location-unterkuenfte">📍 Location & Unterkünfte</Button>
   </div>
+  <p class="formal-invite-note">Alle Informationen folgen mit der Einladung!</p>
 </main>
 
 <div class="pixel-us">
@@ -48,19 +50,8 @@
     gap: 1rem;
     min-height: 100vh;
     box-sizing: border-box;
-    padding: 2rem 1rem var(--bottom-art-space);
+    padding: 1rem 1rem var(--bottom-art-space);
     text-align: center;
-  }
-
-  h1 {
-    font-family: var(--font-script);
-    font-size: clamp(2.4rem, 6vw, 4rem);
-    font-weight: 400;
-  }
-
-  h1 a {
-    color: inherit;
-    text-decoration: none;
   }
 
   .date {
@@ -74,6 +65,11 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.75rem;
+  }
+
+  .formal-invite-note {
+    margin: 0;
+    font-size: 0.95rem;
   }
 
   .pixel-us {

@@ -1,41 +1,47 @@
 <script lang="ts">
   import Button from "$lib/components/Button.svelte";
 
+  type Props = {
+    address: string[];
+    description: string;
+    imageAlt?: string;
+    imageSrc?: string;
+    layout?: "vertical" | "horizontal";
+    mapsUrl: string;
+    name: string;
+    website: string;
+  };
+
   let {
     address,
     description,
     imageAlt,
     imageSrc,
+    layout = "vertical",
     mapsUrl,
     name,
     website,
-  }: {
-    address: string[];
-    description: string;
-    imageAlt?: string;
-    imageSrc?: string;
-    mapsUrl: string;
-    name: string;
-    website: string;
-  } = $props();
+  }: Props = $props();
 </script>
 
-<article class="card">
+<article class="card" class:horizontal={layout === "horizontal"}>
   {#if imageSrc}
     <img src={imageSrc} alt={imageAlt ?? ""} />
   {:else}
     <div class="image-placeholder" aria-hidden="true">Bild folgt</div>
   {/if}
-  <h3>{name}</h3>
-  <p>{description}</p>
-  <address>
-    {#each address as line}
-      <span>{line}</span>
-    {/each}
-  </address>
-  <div class="actions">
-    <Button href={website} target="_blank" rel="noreferrer">🌐 Website</Button>
-    <Button href={mapsUrl} target="_blank" rel="noreferrer">🗺️ Karte</Button>
+  <div class="content">
+    <h3>{name}</h3>
+    <p>{description}</p>
+    <address>
+      {#each address as line}
+        <span>{line}</span>
+      {/each}
+    </address>
+    <div class="actions">
+      <Button href={website} target="_blank" rel="noreferrer">Website</Button>
+      <Button href={mapsUrl} target="_blank" rel="noreferrer">Karte</Button>
+    </div>
   </div>
 </article>
 
@@ -46,9 +52,15 @@
     width: 100%;
     box-sizing: border-box;
     padding: 1.25rem;
-    border: 1px solid color-mix(in srgb, var(--color-foreground) 25%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-foreground) 14%, transparent);
     border-radius: 0.75rem;
     background: color-mix(in srgb, var(--color-background) 85%, white);
+  }
+
+  .content {
+    display: grid;
+    align-content: center;
+    gap: 0.85rem;
   }
 
   h3 {
@@ -90,5 +102,17 @@
     justify-content: center;
     gap: 0.35rem;
     font-size: 0.85rem;
+  }
+
+  @media (min-width: 44rem) {
+    .horizontal {
+      grid-template-columns: minmax(18rem, 1fr) minmax(16rem, 0.9fr);
+      align-items: center;
+      text-align: left;
+    }
+
+    .horizontal .actions {
+      justify-content: start;
+    }
   }
 </style>
