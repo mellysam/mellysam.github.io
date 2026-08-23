@@ -1,42 +1,60 @@
-# sv
+# mellysam.github.io
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Personal site built with SvelteKit as a static single-page app and deployed to GitHub Pages.
 
-## Creating a project
+## Requirements
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Node.js 24
+- npm
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## Installation
 
-To recreate this project with the same configuration:
+Install dependencies:
 
 ```sh
-# recreate this project
-npx sv@0.17.0 create --template minimal --types ts --add prettier --install npm ./
+npm install
 ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start the local dev server:
 
 ```sh
 npm run dev
+```
 
-# or start the server and open the app in a new browser tab
+Open the app automatically:
+
+```sh
 npm run dev -- --open
 ```
 
-## Building
+Run Svelte and TypeScript checks:
 
-To create a production version of your app:
+```sh
+npm run check
+```
+
+Format files:
+
+```sh
+npm run format
+```
+
+## Build and Preview
+
+Build the static site:
 
 ```sh
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Preview the production build locally:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+npm run preview
+```
+
+## Deployment
+
+GitHub Actions deploys the `build` directory to GitHub Pages on pushes to `main`. The workflow can also be run manually from the Actions tab.
