@@ -14,7 +14,7 @@
       <LocationCard
         name="Weingut Edelsbrunner"
         layout="horizontal"
-        description="Let's go party! 🍷"
+        description="Eventlocation. Leider keine Übernachtungsmöglichkeiten. Shuttle zu den Hotels (siehe unten)."
         imageSrc={edelsbrunner}
         imageAlt="Weingut Edelsbrunner"
         website="https://www.weingut-edelsbrunner.at"
