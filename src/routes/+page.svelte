@@ -45,7 +45,7 @@
 
   main {
     display: grid;
-    align-content: start;
+    align-content: center;
     justify-items: center;
     gap: 1rem;
     min-height: 100vh;
