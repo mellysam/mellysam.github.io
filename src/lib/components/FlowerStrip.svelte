@@ -7,7 +7,7 @@
 <style>
   .flowers {
     width: 100%;
-    height: 8rem;
+    height: var(--flower-strip-height, 4.5rem);
     background-repeat: repeat-x;
     background-position: bottom left;
     background-size: auto 100%;

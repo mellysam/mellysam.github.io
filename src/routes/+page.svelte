@@ -32,13 +32,16 @@
   }
 
   main {
+    --bottom-art-space: 11rem;
+    --people-size: min(11rem, 50vw);
+    --flower-strip-height: 4.5rem;
     display: grid;
     align-content: start;
     justify-items: center;
     gap: clamp(1rem, 3vw, 2rem);
     min-height: 100vh;
     box-sizing: border-box;
-    padding: 2rem 1rem 18rem;
+    padding: 2rem 1rem var(--bottom-art-space);
     text-align: center;
   }
 
@@ -56,9 +59,9 @@
 
   .pixel-us {
     position: fixed;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 50%;
-    width: min(18rem, 70vw);
+    width: var(--people-size);
     transform: translateX(-50%);
     z-index: 0;
   }
@@ -68,6 +71,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    --flower-strip-height: 4.5rem;
     z-index: 1;
   }
 </style>

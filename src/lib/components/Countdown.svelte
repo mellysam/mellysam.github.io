@@ -36,7 +36,7 @@
     flex-wrap: wrap;
     align-items: start;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.1rem;
   }
 
   .part {
